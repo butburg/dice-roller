@@ -1,10 +1,16 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import ReplaceMeExample from './ReplaceMeExample';
+import DiceRoller from './DiceRoller';
 import './styles.css';
 
-createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root');
+
+if (!root) {
+  throw new Error('Root element with id "root" was not found in index.html');
+}
+
+createRoot(root).render(
   <React.StrictMode>
-    <ReplaceMeExample />
+    <DiceRoller />
   </React.StrictMode>
 );
